@@ -55,6 +55,44 @@ Mainvisual
 }
 
 /*-------------------------------------------
+Concept
+-------------------------------------------*/
+.wrapper{
+    max-width: 1040px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.concept{
+    padding-top: 130px;
+    padding-bottom: 130px;
+    position: relative;
+}
+.concept .img{
+    max-width: 720px;
+}
+.concept .text{
+    max-width: 600px;
+    background-color: rgba(253, 248, 248, 0.8);
+    padding: 40px;
+    position:absolute;
+    top: 325px;
+    right: 0;
+}
+.concept .text .section-title{
+    font-family: 'YuMincho', 'Yu Mincho', 'serif';
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.concept .text .description{
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/*-------------------------------------------
 スマートフォン
 -------------------------------------------*/
 @media  screen and (max-width: 767px ) {
@@ -65,5 +103,21 @@ Mainvisual
     }
     .mainvisual img{
         height: 480px;
+    }
+    .concept{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        position: static;
+    }
+    .concept img{
+        margin-bottom: 30px;
+    }
+    .concept .text{
+        background-color: transparent;
+        padding: 0;
+        position: static;
+    }
+    .concept .text .section-title{
+        font-size: 24px;
     }
 }
