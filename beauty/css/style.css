@@ -5,7 +5,7 @@ html{
 }
 
 body{
-    background-color: #fdfdfd;
+    background-color: #fdf8f8;
     color: #333;
     font-family: 'YuGothic','Yu Gothic', 'sans-serif';
 }
@@ -29,6 +29,29 @@ a:hover{
 }
 
 /*-------------------------------------------
+Header
+-------------------------------------------*/
+#header .logo{
+    width: 100%;
+    max-width: 120px;
+    line-height: 0;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 50;
+}
+
+#header .logo a{
+    display: block;
+}
+
+/*-------------------------------------------
 スマートフォン
 -------------------------------------------*/
-@media  screen and (max-width: 767px ) {}
+@media  screen and (max-width: 767px ) {
+    #header .logo{
+        max-width: 85px;
+        top: 20px;
+        left: 20px;
+    }
+}
