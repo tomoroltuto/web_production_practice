@@ -80,6 +80,37 @@ Introduction
 .introduction .text{
     font-style: 14pxs;
 }
+/*-------------------------------------------
+Profile
+-------------------------------------------*/
+.section-title{
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+.section-title .en{
+    display: block;
+    font-size: 40px;
+}
+.section-title .ja{
+    display: block;
+    font-size: 14px;
+}
+#profile{
+    display: flex;
+    align-items: center;
+    margin-bottom: 120px;
+}
+#profile .img{
+    width: 50%;
+}
+#profile .detail{
+    width: 50%;
+    padding-left: 80px;
+}
+#profile .detail p{
+    font-size: 14px;
+    line-height: 2;
+}
 
 /*-------------------------------------------
 スマートフォン
@@ -104,5 +135,26 @@ Introduction
     }
     .introduction{
         text-align: left;
+    }
+
+    .section-title{
+        margin-bottom: 25px;
+    }
+    .section-title .en{
+        font-size: 32px;
+    }
+
+    #profile{
+        flex-direction: column-reverse;
+        margin-bottom: 60px;
+    }
+    #profile .img{
+        width: 100%;
+    }
+
+    #profile .detail{
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 20px;
     }
 }
