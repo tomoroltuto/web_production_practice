@@ -181,6 +181,9 @@ Products
     object-fit: cover;
     object-position: left;
 }
+/*-------------------------------------------
+OnlineStore
+-------------------------------------------*/
 .online-store{
     width: 100%;
     height: 400px;
@@ -222,7 +225,25 @@ Products
     top: 20px;
     right: -20px;
 }
-
+/*-------------------------------------------
+Footer
+-------------------------------------------*/
+#footer{
+    background-color: #666;
+    padding: 30px;
+}
+#footer .inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#footer .logo{
+    max-width: 130px;
+}
+#footer .copyright{
+    color: #fff;
+    font-size: 12px;
+}
 
 /*-------------------------------------------
 スマートフォン
@@ -312,5 +333,11 @@ Products
     }
     .online-store .box .tiile{
         font-size: 24px;
+    }
+    #footer{
+        padding: 15px 0;
+    }
+    #footer .logo{
+        max-width: 80px;
     }
 }
