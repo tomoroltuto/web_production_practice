@@ -148,6 +148,39 @@ Products
     right: -13%;
     z-index: 40;
 }
+.new-type{
+    display: flex;
+    align-items: center;
+    padding: 130px 0;
+}
+.new-type .text{
+    width: 50%;
+}
+.new-type .text .text-inner{
+    max-width: 520px;
+    padding: 0 60px 0 20px;
+    margin-left: auto;
+}
+.new-type .text .section-title{
+    font-family: 'YuMincho', 'Yu Mincho', 'serif';
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.new-type .text .description{
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: justify;
+}
+.new-type .img{
+    width: 50%;
+}
+.new-type .img img{
+    height: 480px;
+    object-fit: cover;
+    object-position: left;
+}
 
 /*-------------------------------------------
 スマートフォン
@@ -208,5 +241,27 @@ Products
         font-size: 16px;
         top: -13px;
         right: -13px;
+    }
+    .new-type{
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    .new-type .text{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .new-type .text .text-inner{
+        max-width: 100%;
+        padding: 0;
+    }
+    .new-type .text .section-title{
+        font-size: 24px;
+    }
+    .new-type .img{
+        width: 100%;
+    }
+    .new-type .img img{
+        height: auto;
+        object-fit: contain;
     }
 }
