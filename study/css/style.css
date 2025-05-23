@@ -66,6 +66,33 @@ Header
     margin: 0 auto;
 }
 
+.wrapper {
+    max-width: 940px;
+    padding: 0 20pz;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 80px;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 2px;
+    background-color: #000;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+}
+
+
 
 /*-------------------------------------------
 スマートフォン
@@ -74,11 +101,12 @@ Header
     .pc {
         display: none;
     }
+
     main {
         padding-top: 60px;
     }
 
-/*-------------------------------------------
+    /*-------------------------------------------
 Header
 -------------------------------------------*/
     #header {
@@ -165,5 +193,14 @@ Header
     #header .hamburger.active span:nth-of-type(3) {
         top: 24px;
         transform: rotate(45deg);
+    }
+
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 60px;
+    }
+
+    .section-title::after {
+        width: 60px;
     }
 }
