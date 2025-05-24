@@ -92,18 +92,18 @@ Header
     right: 0;
 }
 
-.highlight{
+.highlight {
     background: linear-gradient(transparent 50%, #fff390 50%);
     font-weight: 700;
 }
 
-.contact{
+.contact {
     background-color: #ffed58;
     clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
     padding: 100px 0 60px;
 }
 
-.contact .inner{
+.contact .inner {
     text-align: center;
 }
 
@@ -112,12 +112,59 @@ Header
     margin-bottom: 40px;
 }
 
-.contact .btn{
+.contact .btn {
     background-color: #fff;
     border: solid 1px #707070;
     display: inline-block;
     font-size: 14px;
     padding: 20px 60px;
+}
+
+#footer {
+    border-top: solid 1px #707070;
+    padding: 40px 0 20px;
+}
+
+#footer .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+#footer .logo {
+    max-width: 130px;
+}
+
+#footer .menu {
+    display: flex;
+    align-items: center;
+}
+
+#footer .menu li {
+    font-size: 14px;
+    margin-left: 40px;
+    position: relative;
+}
+
+#footer .menu li::after {
+    content: "";
+    width: 1px;
+    height: 16px;
+    background-color: #000;
+    transform: rotate(30deg);
+    position: absolute;
+    top: 3px;
+    right: -20px;
+}
+
+#footer .menu li:last-child::after {
+    content: none;
+}
+
+#footer .copyright {
+    font-size: 12px;
+    text-align: center;
 }
 
 
@@ -234,5 +281,26 @@ Header
     .contact {
         clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
         padding: 60px 0 40px;
+    }
+
+    #footer .inner {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    #footer .logo {
+        margin-bottom: 20px;
+    }
+
+    #footer .menu li {
+        margin-left: 30px;
+    }
+
+    #footer .menu li::after {
+        right: -15px;
+    }
+
+    #footer .menu li:first-child {
+        margin-left: 0;
     }
 }
