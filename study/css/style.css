@@ -60,6 +60,28 @@ Header
     margin-left: 40px;
 }
 
+.page-header{
+    background-color: #ffed58;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    padding: 60px 0 100px;
+    text-align: center;
+}
+
+.page-header .page-title .ja{
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.page-header .page-title .en{
+    display: block;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    letter-spacing: 0.1em;
+}
+
 .wrapper-1080 {
     max-width: 1120px;
     padding: 0 20px;
@@ -167,7 +189,6 @@ Header
     text-align: center;
 }
 
-
 /*-------------------------------------------
 スマートフォン
 -------------------------------------------*/
@@ -267,6 +288,15 @@ Header
     #header .hamburger.active span:nth-of-type(3) {
         top: 24px;
         transform: rotate(45deg);
+    }
+
+    .page-header {
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        padding: 30px 0 50px;
+    }
+
+    .page-header .page-title .en{
+        font-size: 30px;
     }
 
     .section-title {
