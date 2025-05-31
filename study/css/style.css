@@ -60,27 +60,46 @@ Header
     margin-left: 40px;
 }
 
-.page-header{
+.page-header {
     background-color: #ffed58;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     padding: 60px 0 100px;
     text-align: center;
 }
 
-.page-header .page-title .ja{
+.page-header .page-title .ja {
     display: block;
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 5px;
 }
 
-.page-header .page-title .en{
+.page-header .page-title .en {
     display: block;
     font-size: 40px;
     font-weight: 400;
     margin-bottom: 5px;
     letter-spacing: 0.1em;
 }
+
+.page-head-text {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.page-head-text .title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.page-head-text .text {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
 
 .wrapper-1080 {
     max-width: 1120px;
@@ -295,8 +314,12 @@ Header
         padding: 30px 0 50px;
     }
 
-    .page-header .page-title .en{
+    .page-header .page-title .en {
         font-size: 30px;
+    }
+
+    .page-head-text .title {
+        font-size: 20px;
     }
 
     .section-title {
@@ -332,5 +355,11 @@ Header
 
     #footer .menu li:first-child {
         margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .sp {
+        display: none;
     }
 }
