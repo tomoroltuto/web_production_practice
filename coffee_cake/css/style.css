@@ -141,6 +141,18 @@ iframe {
 .btn:hover::after {
     background-color: #fff;
 }
+.section-title-h{
+    letter-spacing: 0.1em;
+}
+.section-title-h .ja{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.section-title-h .en {
+    font-size: 14px;
+    font-weight: normal;
+}
 
 /*------------------------------------
 スマートフォン
@@ -256,6 +268,14 @@ iframe {
     }
 
     .section-title-v .en{
+        font-size: 10px;
+    }
+
+    .section-title-h .ja{
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+    .section-title-h .en{
         font-size: 10px;
     }
 }
