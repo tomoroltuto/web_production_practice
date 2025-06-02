@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+.concept {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 120px;
+}
+
+.concept .text {
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-right: auto;
+}
+
+.concept .text .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.concept .text .detail {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.concept .img {
+    max-width: 400px;
+    margin: 0 40px;
+}
+
+.concept .img img {
+    border-radius: 30px;
+}
+
+@media screen and (max-width: 767px) {
+    .concept {
+        flex-direction: column-reverse;
+        margin-bottom: 60px;
+    }
+
+    .concept .img {
+        margin: 0 auto 40px;
+    }
+
+    .concept .btn {
+        margin: 0 auto;
+    }
+}
