@@ -192,6 +192,44 @@ iframe {
     height: 100%;
 }
 
+#footer .menu-area {
+    padding: 40px 0 60px;
+}
+
+#footer .menu-area .logo {
+    max-width: 100px;
+    margin: 0 auto 50px;
+}
+
+#footer .menu-area .menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#footer .menu-area .menu li {
+    font-size: 14px;
+    margin: 0 15px;
+}
+
+#footer .menu-area .sns {
+    display: flex;
+    justify-content: center;
+}
+
+#footer .menu-area .sns li {
+    font-size: 14px;
+    margin: 0 15px;
+}
+
+#footer .copyright {
+    background-color: #9a8865;
+    color: #fff;
+    font-size: 10px;
+    padding: 20px 0;
+    text-align: center;
+}
+
 /*------------------------------------
 スマートフォン
 ------------------------------------*/
@@ -321,14 +359,36 @@ iframe {
     #access {
         padding: 60px 0;
     }
-    #access .inner{
+
+    #access .inner {
         flex-direction: column-reverse;
     }
-    #access .info dd:last-child{
+
+    #access .info dd:last-child {
         margin-bottom: 0;
     }
-    #access .map{
+
+    #access .map {
         height: 240px;
         margin: 0 0 20px;
+    }
+
+    #footer .menu-area{
+        padding: 30px 0;
+    }
+
+    #footer .menu-area .logo{
+        max-width: 80px;
+        margin: 0 auto 30px;
+    }
+
+    #footer .menu-area .menu li{
+        font-size: 12px;
+        margin: 0 10px;
+    }
+
+    #footer .menu-area .sns li{
+        font-size: 12px;
+        margin: 0 10px;
     }
 }
