@@ -106,6 +106,12 @@ iframe {
     margin: 0 auto;
 }
 
+.wrapper-1300{
+    max-width: 1340px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
 .section-title-v {
     letter-spacing: 0.1em;
     writing-mode: vertical-lr;
