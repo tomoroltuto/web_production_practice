@@ -1,35 +1,230 @@
 @charset "UTF-8";
 
-html{
+
+html {
     font-size: 100%;
 }
 
-body{
+body {
     color: #121212;
-    font-family: 'YuGothic', 'Yu Gothic', 'sans-serif';
+    font-family: 'YuGothic', 'Yu Gothic', sans-serif;
 }
 
-.img{
+img {
     max-width: 100%;
     vertical-align: bottom;
 }
 
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     color: #121212;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
-a:hover{
+a:hover {
     opacity: 0.7;
 }
 
 /*---------------------------------
+ロゴの設定
+--------------------------------- */
+
+#header .logo {
+    width: 100%;
+    max-width: 130px;
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    z-index: 30;
+}
+
+#header .logo a {
+    display: block;
+}
+
+#header .logo img {
+    width: 100%;
+}
+
+/*---------------------------------
+ハンバーガーメニュー（ボタン）の設定
+--------------------------------- */
+#header .hamburger {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 30;
+}
+
+#header .hamburger span {
+    width: 30px;
+    height: 2px;
+    background-color: #121212;
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    transition: all 0.4s;
+}
+
+#header .hamburger span:nth-of-type(1) {
+    top: 25px;
+}
+
+#header .hamburger span:nth-of-type(2) {
+    top: 35px;
+}
+
+#header .hamburger.active span:nth-of-type(1) {
+    top: 30px;
+    transform: rotate(-30deg);
+}
+
+#header .hamburger.active span:nth-of-type(2) {
+    top: 30px;
+    transform: rotate(30deg);
+}
+
+#header .navi {
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f9fd;
+    padding: 100px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    transition: all 0.6s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#header .navi.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#header .navi .menu-area {
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+}
+
+#header .navi .menu-area .menu {
+    max-width: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 20px 20px 0 0;
+    padding: 80px 80px 20px;
+    margin: 0 auto;
+}
+
+#header .navi .menu-area .menu li {
+    width: 46%;
+    border-bottom: dashed 1px #121212;
+    margin: 0 2%;
+    position: relative;
+}
+
+#header .navi .menu-area .menu li::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-top: solid 2px #121212;
+    border-right: solid 2px #121212;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 38px;
+    right: 10px;
+}
+
+#header .navi .menu-area .menu li:nth-child(-n+2) {
+    border-top: dashed 1px #121212;
+}
+
+#header .navi .menu-area .menu li a {
+    display: block;
+    padding: 30px 0;
+}
+
+#header .navi .menu-area .btn {
+    max-width: 640px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 0 0 20px 20px;
+    padding: 20px 80px 80px;
+    margin: 0 auto;
+}
+
+#header .navi .menu-area .btn li {
+    width: 46%;
+    background-color: #ffef00;
+    border-radius: 20px;
+    margin: 0 2%;
+}
+
+#header .navi .menu-area .btn li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+#header .navi .menu-area .btn li .arrow {
+    width: 20px;
+    margin-right: 10px;
+}
+
+
+/*---------------------------------
 スマートフォン
 --------------------------------- */
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
+    #header .logo {
+        max-width: 100px;
+        top: 23px;
+    }
+
+    #header .navi .menu-area .menu {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #header .navi .menu-area .menu li {
+        width: 100%;
+        margin: 0;
+    }
+
+    #header .navi .menu-area .menu li::after {
+        top: 30px;
+    }
+
+    #header .navi .menu-area .menu li:nth-child(-n+2) {
+        border-top: none;
+    }
+
+    #header .navi .menu-area .menu li a {
+        padding: 20px 0;
+    }
+
+    #header .navi .menu-area .btn {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #header .navi .menu-area .btn li {
+        width: 100%;
+        margin: 0 0 20px;
+    }
 }
