@@ -186,6 +186,14 @@ a:hover {
     margin-right: 10px;
 }
 
+.mainvisual {
+    position: relative;
+}
+
+.mainvisual .wave {
+    position: absolute;
+    bottom: -2px;
+}
 
 /*---------------------------------
 スマートフォン
@@ -227,4 +235,6 @@ a:hover {
         width: 100%;
         margin: 0 0 20px;
     }
+
+
 }
