@@ -195,6 +195,55 @@ a:hover {
     bottom: -2px;
 }
 
+#about {
+    padding: 80px 0;
+    position: relative;
+    text-align: center;
+}
+
+#about .title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+#about .text {
+    line-height: 2.5;
+}
+
+#about .img {
+    width: 95%;
+    animation: swing 3s ease infinite;
+    margin: 0 auto;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    z-index: -10;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(2deg);
+    }
+
+    50% {
+        transform: rotate(0);
+    }
+
+    75% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
 /*---------------------------------
 スマートフォン
 --------------------------------- */
@@ -236,5 +285,15 @@ a:hover {
         margin: 0 0 20px;
     }
 
+    #about {
+        padding: 40px 0;
+    }
+    #about .title{
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
 
+    #about .text{
+        font-size: 14px;
+    }
 }
