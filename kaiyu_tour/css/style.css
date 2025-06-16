@@ -244,6 +244,25 @@ a:hover {
     }
 }
 
+.parallax{
+    height: 600px;
+    background-image: url(../img/parallax.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.parallax .wave-top{
+    position: absolute;
+    top: -2px;
+}
+
+.parallax .wave-bottom{
+    position: absolute;
+    bottom: -2px;
+}
+
 /*---------------------------------
 スマートフォン
 --------------------------------- */
@@ -292,8 +311,12 @@ a:hover {
         font-size: 34px;
         margin-bottom: 20px;
     }
-
     #about .text{
         font-size: 14px;
+    }
+
+    .parallax{
+        height: 400px;
+        background-attachment: scroll;
     }
 }
