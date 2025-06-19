@@ -448,7 +448,33 @@ a:hover {
     left: 0;
 }
 
+#activity {
+    padding: 80px 0;
+}
 
+#activity .slider .slider-item{
+    max-width: 400px;
+    margin: 0 40px;
+    text-align: center;
+}
+
+#activity .slider .slider-item:nth-child(even){
+    margin-top: 80px;
+}
+
+#activity .slider .slider-item .img img{
+    border-radius: 50%;
+}
+
+#activity .slider .slider-item .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 30px 0 20px;
+}
+
+#activity .slider .slider-item .text{
+    line-height: 1.8;
+}
 
 /*---------------------------------
 スマートフォン
@@ -573,11 +599,28 @@ a:hover {
         padding: 80px 0;
     }
 
-    .reservation .text{
+    .reservation .text {
         font-size: 18px;
     }
 
-    .reservation .btn{
+    .reservation .btn {
         max-width: 320px;
+    }
+
+    #activity {
+        padding: 40px 0;
+    }
+
+    #activity .slider .slider-item {
+        margin: 0 10px;
+    }
+
+    #activity .slider .slider-item .title{
+        font-size: 18px;
+        margin: 20px 0 10px;
+    }
+
+    #activity .slider .slider-item .text{
+        font-size: 14px;
     }
 }
