@@ -383,6 +383,72 @@ a:hover {
     right: 19px;
 }
 
+.reservation {
+    background-color: #f2f9fd;
+    padding: 100px 0;
+    position: relative;
+    text-align: center;
+}
+
+.reservation .text {
+    animation: blink 1.3s ease-in-out infinite alternate;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.reservation .btn {
+    max-width: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffef00;
+    border-radius: 15px;
+    box-shadow: 0px 4px 0px 0px #aaa;
+    font-weight: bold;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+.reservation .btn .arrow {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.reservation .btn:hover {
+    transform: translate(5px);
+    box-shadow: none;
+}
+
+.reservation .wave-top img {
+    width: 100%;
+    height: 34px;
+    object-fit: cover;
+    position: absolute;
+    top: -2px;
+    left: 0;
+}
+
+.reservation .wave-bottom img {
+    width: 100%;
+    height: 34px;
+    object-fit: cover;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+
 
 /*---------------------------------
 スマートフォン
@@ -501,5 +567,17 @@ a:hover {
     #introduction .item .text .content-title .title-text {
         font-size: 22px;
         margin-top: 20px;
+    }
+
+    .reservation {
+        padding: 80px 0;
+    }
+
+    .reservation .text{
+        font-size: 18px;
+    }
+
+    .reservation .btn{
+        max-width: 320px;
     }
 }
