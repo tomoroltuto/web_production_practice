@@ -452,17 +452,17 @@ a:hover {
     padding: 80px 0;
 }
 
-#activity .slider .slider-item{
+#activity .slider .slider-item {
     max-width: 400px;
     margin: 0 40px;
     text-align: center;
 }
 
-#activity .slider .slider-item:nth-child(even){
+#activity .slider .slider-item:nth-child(even) {
     margin-top: 80px;
 }
 
-#activity .slider .slider-item .img img{
+#activity .slider .slider-item .img img {
     border-radius: 50%;
 }
 
@@ -472,8 +472,120 @@ a:hover {
     margin: 30px 0 20px;
 }
 
-#activity .slider .slider-item .text{
+#activity .slider .slider-item .text {
     line-height: 1.8;
+}
+
+#map {
+    background-color: #f2f9fd;
+    padding: 200px 0 60px;
+    position: relative;
+}
+
+#map .wave-top {
+    position: absolute;
+    top: -2px;
+}
+
+#map .wave-bottom {
+    position: absolute;
+    top: calc(100% - 2px);
+}
+
+#map .head-text {
+    line-height: 1.8;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#map .activity-map {
+    position: relative;
+}
+
+#map .activity-map .spot1 {
+    position: absolute;
+    top: 40%;
+    left: 1%;
+}
+
+#map .activity-map .spot2 {
+    position: absolute;
+    top: 69%;
+    left: 19%;
+}
+
+#map .activity-map .spot3 {
+    position: absolute;
+    top: 53%;
+    left: 32%;
+}
+
+#map .activity-map .spot4 {
+    position: absolute;
+    top: 95%;
+    left: 45%;
+}
+
+#map .activity-map .spot5 {
+    position: absolute;
+    top: 86%;
+    left: 70%;
+}
+
+#map .activity-map .spot {
+    width: 100%;
+    max-width: 220px;
+    text-align: center;
+}
+
+#map .activity-map .spot .spot-btn {
+    background-color: #fff;
+    border: solid 1px #121212;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 35px;
+    position: relative;
+}
+
+#map .activity-map .spot .spot-btn::before {
+    content: "";
+    width: 11px;
+    height: 1px;
+    background-color: #121212;
+    position: absolute;
+    top: 15px;
+    right: 14px;
+}
+
+#map .activity-map .spot .spot-btn::after {
+    content: "";
+    width: 1px;
+    height: 11px;
+    background-color: #121212;
+    position: absolute;
+    top: 10px;
+    right: 19px;
+}
+
+#map .activity-map .spot .spot-img {
+    max-width: 180px;
+    display: none;
+    margin: 0 auto;
+    position: absolute;
+    top: -190px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+#map .activity-map .spot .spot-img img {
+    border-radius: 50%;
+}
+
+#map .activity-map .spot-list {
+    display: none;
 }
 
 /*---------------------------------
@@ -615,12 +727,63 @@ a:hover {
         margin: 0 10px;
     }
 
-    #activity .slider .slider-item .title{
+    #activity .slider .slider-item .title {
         font-size: 18px;
         margin: 20px 0 10px;
     }
 
-    #activity .slider .slider-item .text{
+    #activity .slider .slider-item .text {
         font-size: 14px;
+    }
+
+    #map{
+        padding: 100px 0 40px;
+    }
+
+    #map .head-text {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    #map .activity-map .spot .spot-btn {
+        display: none;
+    }
+
+    #map .activity-map .spot-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px 20px;
+        margin-top: 40px;
+    }
+
+    #map .activity-map .spot-list li {
+        width: calc(50% - 10px);
+    }
+
+    #map .activity-map .spot-list li img {
+        border-radius: 50%;
+    }
+
+    #map .activity-map .spot-list li .title {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    #map .activity-map .spot-list li .title .no {
+        width: 35px;
+        height: 35px;
+        background-color: #fff;
+        border: solid 1px #707070;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 17px;
+        margin-right: 10px;
     }
 }
