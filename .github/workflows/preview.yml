@@ -1,0 +1,74 @@
+name: PR Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    if: github.event.action != 'closed'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Add PR Preview Banner
+        run: |
+          # PRプレビュー用のバナーを作成
+          cat > pr-banner.js <<EOL
+          document.addEventListener('DOMContentLoaded', function() {
+            const banner = document.createElement('div');
+            banner.style.position = 'fixed';
+            banner.style.top = '0';
+            banner.style.left = '0';
+            banner.style.right = '0';
+            banner.style.backgroundColor = '#4a90e2';
+            banner.style.color = 'white';
+            banner.style.textAlign = 'center';
+            banner.style.padding = '10px';
+            banner.style.zIndex = '1000';
+            banner.style.fontSize = '14px';
+            banner.innerHTML = 'PR #${{ github.event.pull_request.number }} プレビュー環境 | <a href="https://github.com/${{ github.repository }}/pull/${{ github.event.pull_request.number }}" style="color: white; text-decoration: underline;">PRを表示</a>';
+            document.body.insertBefore(banner, document.body.firstChild);
+            document.body.style.paddingTop = (banner.offsetHeight) + 'px';
+          });
+          EOL
+          
+          # HTMLファイルにバナースクリプトを追加
+          if [ -f "index.html" ]; then
+            sed -i 's|</body>|    <script src="pr-banner.js"></script>\n</body>|' index.html
+          fi
+
+      - name: Deploy PR Preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          action: auto
+
+  remove-preview:
+    runs-on: ubuntu-latest
+    if: github.event.action == 'closed'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+      
+      - name: Remove PR Preview
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          
+          if [ -d "pr-preview/pr-${{ github.event.pull_request.number }}" ]; then
+            git rm -rf "pr-preview/pr-${{ github.event.pull_request.number }}"
+            git commit -m "Remove PR preview for #${{ github.event.pull_request.number }}"
+            git push
+          else
+            echo "No preview directory found to remove"
+          fi
