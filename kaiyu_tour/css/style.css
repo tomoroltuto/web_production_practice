@@ -604,6 +604,98 @@ a:hover {
     z-index: 10;
 }
 
+#footer {
+    background-color: #f2f9fd;
+    padding: 0 20px 40px;
+}
+
+#footer .content{
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 5%;
+    margin: 0 auto 30px;
+    position: relative;
+    top: -60px;
+}
+
+#footer .content .info-area {
+    width: 50%;
+    font-size: 14px;
+}
+
+#footer .content .info-area .address {
+    margin-bottom: 5px;
+}
+
+#footer .content .info-area .tel {
+    margin-bottom: 30px;
+}
+
+#footer .content .info-area .menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#footer .content .info-area .menu li {
+    width: 45%;
+    border-bottom: dashed 1px #121212;
+    position: relative;
+    margin-right: 5%;
+}
+
+#footer .content .info-area .menu li::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-top: solid 1px #121212;
+    border-right: solid 1px #121212;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+#footer .content .info-area .menu li:nth-chid(-n+2) {
+    border-top: dashed 1px #121212;
+}
+
+#footer .content .info-area .menu li a {
+    display: block;
+    padding: 12px 0;
+}
+
+#footer .content .btn-area {
+    width: 45%;
+    max-width: 380px;
+    margin-left: 5%;
+}
+
+#footer .content .btn-area .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffef00;
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 25px 0;
+}
+
+#footer .content .btn-area .btn:first-child {
+    margin-bottom: 20px;
+}
+
+#footer .content .btn-area .btn .arrow {
+    width: 20px;
+    margin-right: 10px;
+}
+
+#footer .copyright {
+    font-size: 10px;
+    text-align: center;
+}
 /*---------------------------------
 スマートフォン
 --------------------------------- */
@@ -811,5 +903,21 @@ a:hover {
         width: 80px;
         bottom: 10px;
         right: 10px;
+    }
+
+    #footer .content {
+        flex-direction: column;
+        padding: 40px 20px;
+        margin: 0 auto;
+    }
+
+    #footer .content .info-area {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #footer .content .btn-area {
+        width: 100%;
+        margin: 0 auto;
     }
 }
