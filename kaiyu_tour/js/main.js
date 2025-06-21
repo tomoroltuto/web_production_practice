@@ -72,5 +72,12 @@ $(function(){
     }).mouseout(function(){
         $("#map .spot5 .spot-img").hide();
     });
-
+    
+    $(window).scroll(function(){
+        if($(this).scrollTop() > 300) {
+            $("#fixed-btn").fadeIn();
+        }else{
+            $("#fixed-btn").fadeOut();
+        }
+    });
 });

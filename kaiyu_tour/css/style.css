@@ -595,6 +595,15 @@ a:hover {
     object-position: bottom;
 }
 
+#fixed-btn {
+    width: 120px;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
 /*---------------------------------
 スマートフォン
 --------------------------------- */
@@ -796,5 +805,11 @@ a:hover {
 
     .bottom-img img {
         height: 300px;
+    }
+
+    #fixed-btn {
+        width: 80px;
+        bottom: 10px;
+        right: 10px;
     }
 }
