@@ -2,12 +2,12 @@ $(function () {
   /*-------------------------------
   ドロップダウンメニュー
   ---------------------------------*/
-  $(".navi .menu .menu-first span").click(function(){
+  $(".navi .menu .menu-first span").click(function () {
     $(this).toggleClass("active");
     $(this).next().slideToggle();
   });
 
-  $(".navi .menu .menu-second").click(function(){
+  $(".navi .menu .menu-second").click(function () {
     $(this).prev().toggleClass("active");
     $(this).slideToggle();
   });
@@ -18,7 +18,7 @@ $(function () {
   $(".hamburger").click(function () {
     $(this).toggleClass("active");
     $("#header .navi").toggleClass("active");
-    $("#header .mask").toggleClass("avtive");
+    $("#header .mask").toggleClass("active");
   });
 
   $(".navi a").click(function () {
@@ -27,11 +27,9 @@ $(function () {
     $("#header .mask").removeClass("active");
   });
 
-  $(".mask").click(function(){
+  $(".mask").click(function () {
     $(".hamburger").removeClass("active");
     $("#header .navi").removeClass("active");
     $("#header .mask").removeClass("active");
   });
-
-
 });

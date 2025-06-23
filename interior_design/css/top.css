@@ -63,6 +63,93 @@
     left: 6%;
 }
 
+.section-title {
+    color: rgba(51, 51, 51, 0.9);
+    font-size: clamp(68px, 8vw, 130px);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.btn {
+    max-width: 120px;
+    background-color: #fff;
+    display: block;
+    border: solid 1px #1f1f1f;
+    font-size: 12px;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.btn::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    background-color: #1f1f1f;
+    transform-origin: 100% 50%;
+    transform: scale(0);
+    transition: transform ease 0.3s;
+}
+
+.btn:hover {
+    color: #fff;
+    opacity: 1;
+}
+
+.btn:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale(1);
+}
+
+.company {
+    margin-bottom: 120px;
+}
+
+.company .section-title {
+    margin: 0 0 -5vw 4vw;
+    position: relative;
+    z-index: 10;
+}
+
+.company .flex {
+    display: flex;
+    align-items: center;
+}
+
+.company .flex .img {
+    width: 65%;
+}
+
+.company .flex .img img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.company .flex .text {
+    width: 35%;
+    background-color: #fff;
+    padding: 5% 0 5% 5%;
+    margin-left: -8%;
+}
+
+.company .text .title {
+    font-family: 'Zen Old Mincho', serif;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.company .text .description {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
 @media screen and (max-width: 767px) {
     .mainvisual {
         height: 400px;
@@ -83,5 +170,45 @@
         font-size: 28px;
         top: 300px;
         left: 6%;
+    }
+
+    .section-title {
+        font-size: 12vw;
+    }
+
+    .company {
+        margin-bottom: 60px;
+    }
+
+    .company .section-title {
+        margin: 0 0 -7vw;
+        text-align: center;
+    }
+
+    .company .flex {
+        flex-direction: column;
+    }
+
+    .company .flex .img {
+        width: 100%;
+    }
+
+    .company .flex .img img {
+        height: 300px;
+    }
+
+    .company .flex .text {
+        width: 100%;
+        margin-left: 0;
+        padding: 20px 20px 0;
+    }
+
+    .company .flex .text .title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .company .flex .text .description {
+        margin-bottom: 20px;
     }
 }

@@ -160,13 +160,13 @@ main {
         overflow: auto;
     }
 
-    #header .navi .menu > li {
+    #header .navi .menu>li {
         width: 100%;
         border-top: solid 1px #1f1f1f;
         margin-left: 0;
     }
 
-    #header .navi .menu > li a {
+    #header .navi .menu>li a {
         width: 100%;
         display: block;
         padding: 20px;
