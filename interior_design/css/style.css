@@ -2,6 +2,8 @@
 
 html {
     font-size: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
@@ -228,6 +230,11 @@ main {
 タブレット
 --------------------------------------------*/
 @media screen and (max-width: 1024px) {
+
+    html {
+        scroll-padding-top: 60px;
+    }
+
     main {
         padding-top: 60px;
     }
