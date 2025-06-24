@@ -318,6 +318,17 @@
     width: 100%;
 }
 
+.fadein {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 1s;
+}
+
+.fadein.inview {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @media screen and (max-width: 767px) {
     .mainvisual {
         height: 400px;

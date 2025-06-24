@@ -32,4 +32,8 @@ $(function () {
     $("#header .navi").removeClass("active");
     $("#header .mask").removeClass("active");
   });
+
+  $(".fadein").on("inview", function(){
+    $(this).addClass("inview");
+  });
 });
