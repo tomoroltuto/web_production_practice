@@ -121,6 +121,48 @@ main {
     display: none;
 }
 
+.page-header {
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.page-header .img {
+    height: 100%;
+}
+
+.page-header .img img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.page-header .page-title-area {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.9);
+    color: #fff;
+    padding: 0 4%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.page-header .page-title-area .page-title .en {
+    display: block;
+    font-size: 46px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.page-header .page-title-area .page-title .ja {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+}
+
 #footer {
     display: flex;
     justify-content: space-between;
@@ -352,6 +394,28 @@ main {
 スマートフォン
 --------------------------------------------*/
 @media screen and (max-width: 767px) {
+
+    .page-header {
+        margin-bottom: 40px;
+    }
+
+    .page-header .img img {
+        height: 240px;
+    }
+
+    .page-header .page-title-area {
+        height: 70px;
+        top: auto;
+        bottom: 0;
+    }
+
+    .page-header .page-title-area .page-title .en {
+        font-size: 24px;
+    }
+
+    .page-header .page-title-area .page-title .ja {
+        font-size: 12px;
+    }
 
     #footer {
         flex-direction: column-reverse;
