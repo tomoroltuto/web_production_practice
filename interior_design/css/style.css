@@ -121,6 +121,67 @@ main {
     display: none;
 }
 
+#footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 80px 5%;
+}
+
+#footer a {
+    color: #fff;
+}
+
+#footer .info-area {
+    width: 35%;
+}
+
+#footer .info-area .logo {
+    width: 100%;
+    max-width: 220px;
+    display: block;
+    line-height: 0;
+    margin-bottom: 30px;
+}
+
+#footer .info-area .info {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+#footer .info-area .copyright {
+    font-size: 10px;
+}
+
+#footer .menu-area {
+    width: 65%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#footer .menu-area .menu-col {
+    width: 100%;
+    max-width: 130px;
+}
+
+#footer .menu-area .menu-col .menu-title {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+#footer .menu-area .menu-col .menu-list li {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#footer .menu-area .menu-col .menu-list li::before {
+    content: "-";
+    margin-right: 10px;
+}
+
 /*--------------------------------------------
 タブレット
 --------------------------------------------*/
@@ -290,4 +351,28 @@ main {
 /*--------------------------------------------
 スマートフォン
 --------------------------------------------*/
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+
+    #footer {
+        flex-direction: column-reverse;
+        padding: 60px 20px;
+    }
+
+    #footer .info-area {
+        width: 100%;
+    }
+
+    #footer .menu-area {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    #footer .info-area {
+        text-align: center;
+    }
+
+    #footer .info-area .logo {
+        margin: 0 auto 30px;
+    }
+}
