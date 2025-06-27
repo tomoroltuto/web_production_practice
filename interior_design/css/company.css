@@ -202,6 +202,34 @@
     border-bottom: solid 1px #ccc;
 }
 
+#access {
+    margin-bottom: 120px;
+}
+
+#access .info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+#access .info a {
+    width: 90px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #1f1f1f;
+    font-size: 12px;
+}
+
+#access .map iframe {
+    width: 100%;
+    height: 400px;
+}
+
 @media screen and (max-width: 767px) {
     .pagelink-list {
         margin-bottom: 40px;
@@ -289,5 +317,9 @@
     #overview .overview-list dd {
         width: calc(100% - 100px);
         padding: 20px 0;
+    }
+
+    #access {
+        margin-bottom: 60px;
     }
 }
