@@ -94,4 +94,10 @@ $(function () {
     $("body").css("overflow-y", "auto");
     $(".modal-container").removeClass("active");
   });
+
+  $(".faq-list dd").hide();
+  $(".faq-list dt").click(function(){
+    $(this).next().slideToggle();
+    $(this).toggleClass("active");
+  });
 });
