@@ -57,17 +57,149 @@
       <div class="mask"></div>
     </header>
     <main>
-        <div class="page-header">
-            <div class="img">
-                <img src="img/contact/mainvisual.jpg" alt="">
-            </div>
-            <h1 class="page-title-area">
-                <div class="page-title">
-                    <span class="en">CONTACT</span>
-                    <span class="ja">お問い合わせ</span>
-                </div>
-            </h1>
+      <div class="page-header">
+        <div class="img">
+          <img src="img/contact/mainvisual.jpg" alt="" />
         </div>
+        <h1 class="page-title-area">
+          <div class="page-title">
+            <span class="en">CONTACT</span>
+            <span class="ja">お問い合わせ</span>
+          </div>
+        </h1>
+      </div>
+      <p class="head-text">
+        ご不明点やご質問などございましたら、<br class="pc" />下記のフォーム
+        からお気軽にお問い合せください。
+      </p>
+      <div class="form-area">
+        <p class="form-title">お問い合せフォーム</p>
+        <form action="" method="post">
+          <dl>
+            <div class="item">
+              <dt>
+                <label for="kind">お問い合わせ種別</label
+                ><span class="require">必須</span>
+              </dt>
+              <dd>
+                <select name="kind" id="kind">
+                  <option value="">選択してください</option>
+                  <option value="インテリアについて">インテリアについて</option>
+                  <option value="店舗デザインについて">
+                    店舗デザインについて
+                  </option>
+                  <option value="採用について">採用について</option>
+                  <option value="取材依頼について">取材依頼について</option>
+                  <option value="その他">その他</option>
+                </select>
+              </dd>
+            </div>
+            <div class="item">
+              <dt>
+                <label for="kind">お名前</label
+                ><span class="require">必須</span>
+              </dt>
+              <dd>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="インテリア 太郎"
+                />
+              </dd>
+            </div>
+            <div class="item">
+              <dt>
+                <label for="kind">メールアドレス</label
+                ><span class="require">必須</span>
+              </dt>
+              <dd>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="xxxxxxxxx@xxx.xxxx"
+                />
+              </dd>
+            </div>
+            <div class="item">
+              <dt>どこでお知りになりましたか？</dt>
+              <dd class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    name="know[]"
+                    id="know-1"
+                    value="SNS"
+                  />
+                  <label for="know-1">SNS</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    name="know[]"
+                    id="know-2"
+                    value="Google検索"
+                  />
+                  <label for="know-2">Google検索</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    name="know[]"
+                    id="know-3"
+                    value="紹介・口コミ"
+                  />
+                  <label for="know-3">紹介・口コミ</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    name="know[]"
+                    id="know-4"
+                    value="その他"
+                  />
+                  <label for="know-4">その他</label>
+                </div>
+              </dd>
+            </div>
+            <div class="item">
+              <dt>
+                <label for="message">お問い合わせ内容</label
+                ><span class="require">必須</span>
+              </dt>
+              <dd>
+                <textarea
+                  id="message"
+                  cols="40"
+                  rows="8"
+                  name="message"
+                ></textarea>
+              </dd>
+            </div>
+          </dl>
+
+          <div class="privacy-policy">
+            <div class="privacy-text">
+                <p class="privacy-title">個人情報の取り扱いについて</p>
+                <p>当社は、お客様等の個人情報について、個人情報保護に関する法令およびその他の規範を遵守します。</p>
+                <ol>
+                    <li>1. 個人情報の取り扱いに関するテキストが入ります個人情報の取り扱いに関するテキストが入ります個人情報の取り扱いに関するテキストが入ります</li>
+                    <li>2. 個人情報の取り扱いに関するテキストが入ります個人情報の取り扱いに関するテキストが入ります個人情報の取り扱いに関するテキストが入ります</li>
+                    <li>3. 個人情報の取り扱いに関するテキストが入ります個人情報の取り扱いに関するテキストが入ります個人情報の取り扱いに関するテキストが入ります</li>
+                    <li>4. 個人情報の取り扱いに関するテキストが入ります個人情報の取り扱いに関するテキストが入ります個人情報の取り扱いに関するテキストが入ります</li>
+                    <li>5. 個人情報の取り扱いに関するテキストが入ります個人情報の取り扱いに関するテキストが入ります個人情報の取り扱いに関するテキストが入ります</li>
+                </ol>
+            </div>
+            <div class="privacy-item">
+                <input type="checkbox" name="privacy" id="privacy" value="">
+                <label for="privacy">個人情報の取り扱いに同意する</label>
+            </div>
+          </div>
+
+          <input class="btn-submit" type="submit" name="send" value="送信">
+        </form>
+      </div>
     </main>
     <footer id="footer">
       <div class="info-area">
